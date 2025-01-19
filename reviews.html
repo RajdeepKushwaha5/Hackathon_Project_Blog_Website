@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - ByteInsight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-menu">
+                <button id="menuToggle" class="menu-toggle" aria-label="Menu" title="Menu" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="./index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                    ByteInsight
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button search-toggle" type="button" aria-label="Search" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+                <div class="search-bar hidden">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="button" class="close-search" aria-label="Close">X</button>
+                </div>
+
+                <a href="./images/form.html" class="user-profile"> 
+                <button class="icon-button" aria-label="Menu" type="button" title="Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-header">
+            <div class="container">
+                <h1>Product Reviews</h1>
+                <p>In-depth analysis and hands-on reviews of the latest tech products</p>
+            </div>
+        </div>
+
+        <section class="articles-section">
+            <div class="container">
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="./images/rev1.jpeg" alt="Smartphone Review">
+                        </div>
+                        <div class="article-content">
+                            <span class="category">Smartphones</span>
+                            <h3>iPhone 15 Pro Max: Three Months Later</h3>
+                            <p>A detailed long-term review of Apple's flagship device and how it holds up in daily use.</p>
+                            <div class="article-meta">
+                                <span>Emily Watson</span>
+                                <span class="separator">•</span>
+                                <span>March 14, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="./images/rev2.jpeg" alt="Laptop Review">
+                        </div>
+                        <div class="article-content">
+                            <span class="category">Laptops</span>
+                            <h3>The Ultimate Creator Laptop Showdown</h3>
+                            <p>Comparing the top laptops for content creators and creative professionals.</p>
+                            <div class="article-meta">
+                                <span>Robert Chen</span>
+                                <span class="separator">•</span>
+                                <span>March 13, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="./images/rev3.jpeg" alt="Headphones">
+                        </div>
+                        <div class="article-content">
+                            <span class="category">Audio</span>
+                            <h3>Best Noise-Cancelling Headphones of 2024</h3>
+                            <p>Our comprehensive guide to the top noise-cancelling headphones on the market.</p>
+                            <div class="article-meta">
+                                <span>Sarah Miller</span>
+                                <span class="separator">•</span>
+                                <span>March 12, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>Reach out to us for any inquiries or support.</p>
+        <div class="contact-details">
+            <p><strong>Email:</strong> contact@byteright.com</p>
+            <p><strong>Phone:</strong> +91 111-000-4567</p>
+            <p><strong>Address:</strong> 123 Tech Lane, Bangalore, KA 110292, INDIA</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <textarea id="message" placeholder="Type your message" required></textarea>
+            <label>
+                <input type="checkbox" id="terms" required> I accept the Terms
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+
+       <!-- Footer  -->
+       <footer class="site-footer">
+        <div class="footer-container">
+            <div class="newsletter-section">
+                <h3>Subscribe to our two newsletters:</h3>
+                <form id="newsletterForm" class="newsletter-form">
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>ByteInsight Deals - A weekly roundup of our favorite tech deals</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" checked>
+                        <span>The Morning After - A daily dose of the news you need</span>
+                    </label>
+                    <input type="email" id="newsletterEmail" class="newsletter-email" placeholder="address@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>By subscribing, you are agreeing to ByteInsight's <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" aria-label="Facebook" target="_blank" rel="noopener" ><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener" ><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/?hl=en" aria-label="Instagram" target="_blank" rel="noopener" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener" ><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ByteInsight. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
