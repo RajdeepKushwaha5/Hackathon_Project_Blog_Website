@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteInsight - Tech News & Analysis</title>
+    <meta name="description" content="ByteInsight - Tech News & Analysis" />
+    <meta
+      name="keywords"
+      content="Tech, News, Reviews, Science, Entertainment"
+    />
+    <meta name="author" content="ByteInsight" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo-menu">
+          <button
+            id="menuToggle"
+            class="menu-toggle"
+            aria-label="Menu"
+            title="Menu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a href="./index.html" class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 7h-9" />
+              <path d="M14 17H5" />
+              <circle cx="17" cy="17" r="3" />
+              <circle cx="7" cy="7" r="3" />
+            </svg>
+            ByteInsight
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="./tech.html">Tech</a></li>
+            <li><a href="./reviews.html">Reviews</a></li>
+            <li><a href="./science.html">Science</a></li>
+            <li><a href="./entertainment.html">Entertainment</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-button search-toggle"
+            aria-label="Search"
+            title="Search"
+            type="button"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <div class="search-bar hidden">
+            <input type="text" placeholder="Search..." aria-label="Search" />
+            <button type="button" class="close-search" aria-label="Close">
+              X
+            </button>
+          </div>
+
+          <a href="./images/form.html" class="user-profile">
+            <button
+              class="icon-button"
+              aria-label="User Profile"
+              title="User Profile"
+              type="button"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="featured-article">
+        <div class="featured-image">
+          <img src="./images/hp1.jpeg" alt="AI Technology" />
+          <div class="featured-content">
+            <span class="category">AI & Machine Learning</span>
+            <h1>The Future of AI: Breaking New Boundaries</h1>
+            <p>
+              Artificial Intelligence continues to evolve at an unprecedented
+              pace, reshaping industries and human interaction.
+            </p>
+            <div class="article-meta">
+              <span>Sarah Chen</span>
+              <span class="separator">•</span>
+              <span>March 14, 2024</span>
+              <span class="separator">•</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <section class="filter-section">
+        <h2>Filter Articles</h2>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search articles..."
+          aria-label="Search"
+        />
+
+        <label for="categorySelect" class="visually-hidden"
+          >Select Category</label
+        >
+        <select id="categorySelect" aria-label="Select Category">
+          <option value="">All Categories</option>
+          <option value="AI & Machine Learning">AI & Machine Learning</option>
+          <option value="Blockchain">Blockchain</option>
+        </select>
+      </section>
+
+      <section class="latest-stories">
+        <div class="container">
+          <h2>Latest Stories</h2>
+          <div class="articles-grid" id="articlesGrid">
+            <article class="article-card" data-category="AI & Machine Learning">
+              <div class="article-image">
+                <img src="./images/hp2.jpeg" alt="Web3 Technology" />
+              </div>
+              <div class="article-content">
+                <span class="category">AI & Machine Learning</span>
+                <h3>The Future of AI: Breaking New Boundaries</h3>
+                <p>
+                  Artificial Intelligence continues to evolve at an
+                  unprecedented pace, reshaping industries and human
+                  interaction.
+                </p>
+                <div class="article-meta">
+                  <span>Sarah Chen</span>
+                  <span class="separator">•</span>
+                  <span>March 14, 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="Blockchain">
+              <div class="article-image">
+                <img src="./images/hp3.jpeg" alt="Quantum Computing" />
+              </div>
+              <div class="article-content">
+                <span class="category">Blockchain</span>
+                <h3>The Rise of Quantum Computing</h3>
+                <p>
+                  How quantum computers are set to transform computing as we
+                  know it.
+                </p>
+                <div class="article-meta">
+                  <span>Michael Chang</span>
+                  <span class="separator">•</span>
+                  <span>March 13, 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-image">
+                <img src="./images/entertainment2.jpeg" alt="Streaming" />
+              </div>
+              <div class="article-content">
+                <span class="category">Entertainment</span>
+                <h3>Streaming Wars: The Battle for Viewer Attention</h3>
+                <p>
+                  Analysis of the latest developments in the competitive
+                  streaming service landscape.
+                </p>
+                <div class="article-meta">
+                  <span>Jessica Lee</span>
+                  <span class="separator">•</span>
+                  <span>March 13, 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="./images/entertainment3.jpeg"
+                  alt="VR Entertainment"
+                />
+              </div>
+              <div class="article-content">
+                <span class="category">Entertainment</span>
+                <h3>VR Entertainment: Beyond Gaming</h3>
+                <p>
+                  Exploring new applications of virtual reality in entertainment
+                  and social interaction.
+                </p>
+                <div class="article-meta">
+                  <span>Chris Anderson</span>
+                  <span class="separator">•</span>
+                  <span>March 12, 2024</span>
+                </div>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="article-image">
+                <img src="./images/science2.jpeg" alt="Medical Research" />
+              </div>
+              <div class="article-content">
+                <span class="category">Science</span>
+                <h3>Breakthrough in Cancer Treatment Research</h3>
+                <p>
+                  Revolutionary new approach shows promising results in early
+                  clinical trials.
+                </p>
+                <div class="article-meta">
+                  <span>Dr. Sarah Zhang</span>
+                  <span class="separator">•</span>
+                  <span>March 13, 2024</span>
+                </div>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="./images/quantum.jpeg"
+                  alt="Quantum Computing"
+                  class="insight-image"
+                />
+              </div>
+              <div class="article-content">
+                <span class="category">Computing</span>
+                <h3>Dr. Jane Smith on Quantum Computing</h3>
+                <p>
+                  Insights from a leading expert on the future of quantum
+                  technologies.
+                </p>
+              </div>
+            </article>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-editor">
+        <h2>Create a New Blog Post</h2>
+        <div class="editor-container">
+          <div class="text-editor">
+            <h3>Text Editor</h3>
+            <div
+              contenteditable="true"
+              id="blogContent"
+              class="editor"
+              placeholder="Start writing your blog post..."
+            ></div>
+            <div class="editor-controls">
+              <button id="boldBtn" title="Bold" class="icon-button">
+                <strong>B</strong>
+              </button>
+              <button id="italicBtn" title="Italic" class="icon-button">
+                <em>I</em>
+              </button>
+              <button id="underlineBtn" title="Underline" class="icon-button">
+                <u>U</u>
+              </button>
+              <button id="h1Btn" title="Heading 1" class="icon-button">
+                H1
+              </button>
+              <button id="h2Btn" title="Heading 2" class="icon-button">
+                H2
+              </button>
+              <button id="bulletBtn" title="Bullet" class="icon-button">
+                •
+              </button>
+            </div>
+            <div class="editor-actions">
+              <button id="saveBtn">Save</button>
+              <button id="postBtn">Post</button>
+            </div>
+          </div>
+          <div class="note-taking-container">
+            <div class="saved-notes">
+              <h2>Saved Notes</h2>
+              <ul id="notesList">
+              </ul>
+            </div>
+            <div class="note-taking">
+              <h2>Note Taking</h2>
+              <textarea
+                id="noteInput"
+                placeholder="Type your note here..."
+              ></textarea>
+              <button id="saveNote">Save Note</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <section class="trending-topics">
+          <h2>Trending Topics</h2>
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-item">AI & Machine Learning</div>
+              <div class="carousel-item">Blockchain Technology</div>
+              <div class="carousel-item">Quantum Computing</div>
+              <div class="carousel-item">VR & AR Innovations</div>
+              <div class="carousel-item">Cybersecurity Trends</div>
+              <div class="carousel-item">5G Technology</div>
+              <div class="carousel-item">Cloud Computing</div>
+              <div class="carousel-item">Internet of Things (IoT)</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tech-timeline">
+          <h2>Tech Timeline</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="year">2020</div>
+              <div class="content">Launch of 5G technology.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2021</div>
+              <div class="content">Rise of AI in healthcare.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2022</div>
+              <div class="content">Advancements in quantum computing.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2023</div>
+              <div class="content">
+                Widespread adoption of blockchain technology in various sectors.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2024</div>
+              <div class="content">
+                Significant breakthroughs in AI ethics and regulations.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2025</div>
+              <div class="content">
+                Integration of AI and IoT for smart cities.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2026</div>
+              <div class="content">
+                Advancements in renewable energy technologies.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2027</div>
+              <div class="content">
+                Development of quantum internet for secure communications.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="insights">
+          <div class="container">
+            <h2>Future Tech Insights</h2>
+            <div class="articles-grid">
+              <article class="article-card">
+                <div class="article-image">
+                  <img
+                    src="./images/i_heathcare.jpg"
+                    alt="AI in Healthcare"
+                    class="insight-image"
+                  />
+                </div>
+                <div class="article-content">
+                  <span class="category">AI & Machine Learning</span>
+                  <h3>AI in Healthcare: Transforming Patient Care</h3>
+                  <p>
+                    Discover how AI is revolutionizing diagnostics and treatment
+                    plans.
+                  </p>
+                </div>
+              </article>
+              <article class="article-card">
+                <div class="article-image">
+                  <img
+                    src="./images/future2.jpeg"
+                    alt="Blockchain"
+                    class="insight-image"
+                  />
+                </div>
+                <div class="article-content">
+                  <span class="category">Blockchain</span>
+                  <h3>Blockchain Beyond Cryptocurrency</h3>
+                  <p>
+                    Exploring the potential of blockchain in various industries.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="expert-insights">
+          <div class="container">
+            <h2>Expert Insights</h2>
+            <div class="articles-grid">
+              <article class="article-card">
+                <div class="article-image">
+                  <img
+                    src="./images/quantum.jpeg"
+                    alt="Quantum Computing"
+                    class="insight-image"
+                  />
+                </div>
+                <div class="article-content">
+                  <span class="category">Quantum Computing</span>
+                  <h3>Dr. Jane Smith on Quantum Computing</h3>
+                  <p>
+                    Insights from a leading expert on the future of quantum
+                    technologies.
+                  </p>
+                </div>
+              </article>
+              <article class="article-card">
+                <div class="article-image">
+                  <img
+                    src="./images/ai_ethics.jpeg"
+                    alt="AI Ethics"
+                    class="insight-image"
+                  />
+                </div>
+                <div class="article-content">
+                  <span class="category">AI Ethics</span>
+                  <h3>Mark Johnson's Take on AI Ethics</h3>
+                  <p>
+                    Understanding the ethical implications of AI advancements.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-counter">
+          <h2>Our Impact</h2>
+          <div class="stats-grid">
+            <div class="stat-card" data-target="1000">
+              <h3>Articles Published</h3>
+              <p class="counter">1200+</p>
+            </div>
+            <div class="stat-card" data-target="5000">
+              <h3>Subscribers</h3>
+              <p class="counter">5000+</p>
+            </div>
+            <div class="stat-card" data-target="300">
+              <h3>Daily Visitors</h3>
+              <p class="counter">2000+</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-accordion">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-toggle" aria-expanded="false">
+              What is ByteInsight?
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>
+                ByteInsight is a tech news and analysis platform providing
+                insights into the latest trends in technology.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-toggle" aria-expanded="false">
+              How can I subscribe?
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>
+                You can subscribe to our newsletters by filling out the form in
+                the footer.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-toggle" aria-expanded="false" type="button">
+              Who is the creator of ByteInsight?
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>The creator of ByteInsight is Rajdeep Singh.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+      <p>Reach out to us for any inquiries or support.</p>
+      <div class="contact-details">
+        <p><strong>Email:</strong> contact@byteright.com</p>
+        <p><strong>Phone:</strong> +91 111-000-4567</p>
+        <p>
+          <strong>Address:</strong> 123 Tech Lane, Bangalore, KA 110292, INDIA
+        </p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <textarea
+          id="message"
+          placeholder="Type your message"
+          required
+        ></textarea>
+        <label>
+          <input type="checkbox" id="terms" required /> I accept the Terms
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="newsletter-section">
+          <h3>Subscribe to our two newsletters:</h3>
+          <form id="newsletterForm" class="newsletter-form">
+            <label>
+              <input type="checkbox" checked />
+              <span
+                >ByteInsight Deals - A weekly roundup of our favorite tech
+                deals</span
+              >
+            </label>
+            <label>
+              <input type="checkbox" checked />
+              <span>The Morning After - A daily dose of the news you need</span>
+            </label>
+            <input
+              type="email"
+              id="newsletterEmail"
+              class="newsletter-email"
+              placeholder="address@email.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p>
+            By subscribing, you are agreeing to ByteInsight's
+            <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+          </p>
+        </div>
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/?hl=en"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://in.linkedin.com/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 ByteInsight. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
