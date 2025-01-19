@@ -4,7 +4,8 @@ Tech Blog Website build using HTML, CSS and vanilla JavaScript (no use of framew
 Click on this link https://rajdeepkushwaha5.github.io/Hackathon_Project_Blog_Website/ it will take you to the website !
 
 
-ByteInsight
+
+**ByteInsight**
 
 1️⃣ Introduction:
 
